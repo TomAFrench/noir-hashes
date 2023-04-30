@@ -21,6 +21,11 @@ jobs:
         with:
           toolchain: stable
 
-      - name: Run Noir tests
+      - name: Run Poseidon tests
+        working-directory: poseidon
+        run: nargo test
+
+      - name: Run Mimc tests
+        working-directory: mimc
         run: nargo test
 
